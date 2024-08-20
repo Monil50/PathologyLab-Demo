@@ -446,7 +446,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 637545105}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &71268028
 BoxCollider:
@@ -629,7 +629,7 @@ Transform:
   - {fileID: 20701511}
   - {fileID: 1755087549}
   m_Father: {fileID: 637545105}
-  m_RootOrder: 21
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &88088113
 BoxCollider:
@@ -4247,23 +4247,23 @@ Transform:
   - {fileID: 5331913169430464641}
   - {fileID: 255530293938330269}
   - {fileID: 3901656229224973911}
-  - {fileID: 5580232193577389408}
   - {fileID: 8075487007225703878}
+  - {fileID: 5580232193577389408}
   - {fileID: 543450653040437804}
   - {fileID: 390044305}
   - {fileID: 1991066211}
   - {fileID: 408497807}
   - {fileID: 213452526}
   - {fileID: 1044690633}
-  - {fileID: 1841692335}
-  - {fileID: 2343033554886609414}
   - {fileID: 989351072}
   - {fileID: 1345903421}
   - {fileID: 71268027}
-  - {fileID: 735245397}
-  - {fileID: 1303967197}
   - {fileID: 2142393372}
   - {fileID: 88088112}
+  - {fileID: 735245397}
+  - {fileID: 1303967197}
+  - {fileID: 1841692335}
+  - {fileID: 2343033554886609414}
   m_Father: {fileID: 1995543730}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5727,7 +5727,7 @@ GameObject:
   - component: {fileID: 989351074}
   - component: {fileID: 989351073}
   m_Layer: 0
-  m_Name: Blood sample tubes (1)
+  m_Name: Blood sample tubes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5749,7 +5749,7 @@ Transform:
   - {fileID: 1863422564}
   - {fileID: 128839364}
   m_Father: {fileID: 637545105}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: 180}
 --- !u!23 &989351073
 MeshRenderer:
@@ -7614,7 +7614,7 @@ Transform:
   - {fileID: 1508574488}
   - {fileID: 889089647}
   m_Father: {fileID: 637545105}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1345903422
 Rigidbody:
@@ -10094,7 +10094,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2f4c3f9120bd26746883376e55d2b17d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f4c3f9120bd26746883376e55d2b17d,
         type: 3}
@@ -11318,7 +11318,7 @@ Transform:
   - {fileID: 565549093}
   - {fileID: 2126154282}
   m_Father: {fileID: 637545105}
-  m_RootOrder: 20
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &2142393373
 BoxCollider:
@@ -13770,7 +13770,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 637545105}
-  m_RootOrder: 14
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2373694319328882151
 MeshFilter:
@@ -16459,7 +16459,7 @@ Transform:
   m_Children:
   - {fileID: 7102319438595479488}
   m_Father: {fileID: 637545105}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5601599514989960422
 GameObject:
@@ -18967,7 +18967,7 @@ Transform:
   m_Children:
   - {fileID: 2066266063}
   m_Father: {fileID: 637545105}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8102382927081798402
 MeshRenderer:
