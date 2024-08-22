@@ -20,6 +20,12 @@ public class ExpositGrabInteractable : MonoBehaviour
     public UnityEvent OnRelese;
     public UnityEvent FastRelese;
 
+    //Hand Swith Manager
+   /* public GameObject XRRightHandModel;
+    public GameObject XRLeftHandModel;
+    public GameObject ObjectRightHandPose;
+    public GameObject ObjectLeftHandPose;*/
+
     bool isRightHandGrab = false;
     bool isLeftHandGrab = false;
 
@@ -34,6 +40,9 @@ public class ExpositGrabInteractable : MonoBehaviour
         originalParent = DropPoint.transform.parent; // Store the original parent of the object
         DropPoint.SetActive(false);
         DropColider = DropPoint.GetComponent<Collider>();
+       // ObjectLeftHandPose.SetActive(false);
+       // ObjectRightHandPose.SetActive(false);
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -47,6 +56,8 @@ public class ExpositGrabInteractable : MonoBehaviour
                 StartCoroutine(OnDropObjectLate());
                 isRightHandGrab = true;
 
+                
+
                 // Trigger haptic feedback
                 TriggerHapticFeedback(true);
             }
@@ -58,6 +69,7 @@ public class ExpositGrabInteractable : MonoBehaviour
                 StartCoroutine(Grab(other.transform));
                 StartCoroutine(OnDropObjectLate());
                 isLeftHandGrab = true;
+
 
                 // Trigger haptic feedback
                 TriggerHapticFeedback(false);
@@ -82,7 +94,7 @@ public class ExpositGrabInteractable : MonoBehaviour
         transform.SetParent(hand); // Make the object a child of the hand
         GetComponent<Rigidbody>().isKinematic = true; // Make it kinematic so it moves with the hand
         OnGrab.Invoke();
-
+   
         float elapsedTime = 0f;
         if (UseAttachTransform)
         {
@@ -92,11 +104,17 @@ public class ExpositGrabInteractable : MonoBehaviour
                 {
                     transform.localPosition = Vector3.Lerp(gameObject.transform.localPosition, RightAttachTransform.transform.localPosition, elapsedTime / lerpDuration);
                     transform.localRotation = Quaternion.Lerp(gameObject.transform.localRotation, RightAttachTransform.transform.localRotation, elapsedTime / lerpDuration);
+                    //XRRightHandModel.SetActive(false);
+                    //ObjectRightHandPose.SetActive(true);
+                    //ObjectLeftHandPose.SetActive(false);
                 }
                 if (isLeftHandGrab)
                 {
                     transform.localPosition = Vector3.Lerp(gameObject.transform.localPosition, LeftAttachTransform.transform.localPosition, elapsedTime / lerpDuration);
                     transform.localRotation = Quaternion.Lerp(gameObject.transform.localRotation, LeftAttachTransform.transform.localRotation, elapsedTime / lerpDuration);
+                 /*   XRLeftHandModel.SetActive(false);
+                    ObjectLeftHandPose.SetActive(true);
+                    ObjectRightHandPose.SetActive(false);*/
                 }
                 elapsedTime += Time.deltaTime;
                 yield return null;
@@ -152,6 +170,10 @@ public class ExpositGrabInteractable : MonoBehaviour
     public void FaaaastRelese()
     {
         FastRelese.Invoke();
+     /*   XRRightHandModel.SetActive(true);
+        XRLeftHandModel.SetActive(true);
+        ObjectLeftHandPose.SetActive(false);
+        ObjectRightHandPose.SetActive(false);*/
     }
 
     private void TriggerHapticFeedback(bool isRightHand)
