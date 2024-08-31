@@ -41,6 +41,7 @@
 
 
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR;
 
 public class ShakeCounter : MonoBehaviour
@@ -53,6 +54,7 @@ public class ShakeCounter : MonoBehaviour
 
     private int shakeCount = 0;
     private float lastShakeTime = 0;
+    public UnityEvent endShake;
 
     void Update()
     {
@@ -104,6 +106,7 @@ public class ShakeCounter : MonoBehaviour
             {
                // AudioManager.instance.PlayAudio("correct-156911");
                 capCollider.GetComponent<Collider>().enabled = true;
+                endShake.Invoke();
 
             }
         }
