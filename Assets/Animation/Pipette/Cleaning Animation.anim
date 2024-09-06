@@ -707,7 +707,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 5.5833335
+  - time: 5.55
     functionName: CallEventByAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
