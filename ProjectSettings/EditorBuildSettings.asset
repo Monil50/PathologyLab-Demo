@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EX PathologyLab.unity
+    path: Assets/Scenes/1.PathologyLab - Main Scene.unity
     guid: e7ecc1ee8f713b4439fe0ed6a2cea516
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 91cb86f02a18e874880553b0191acae7,
