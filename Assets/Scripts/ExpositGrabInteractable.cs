@@ -19,6 +19,7 @@ public class ExpositGrabInteractable : MonoBehaviour
     public UnityEvent OnGrab;
     public UnityEvent OnRelese;
     public UnityEvent FastRelese;
+  
 
     //Hand Swith Manager
    /* public GameObject XRRightHandModel;
@@ -55,7 +56,7 @@ public class ExpositGrabInteractable : MonoBehaviour
                 StartCoroutine(Grab(other.transform));
                 StartCoroutine(OnDropObjectLate());
                 isRightHandGrab = true;
-
+               
                 
 
                 // Trigger haptic feedback
@@ -69,6 +70,7 @@ public class ExpositGrabInteractable : MonoBehaviour
                 StartCoroutine(Grab(other.transform));
                 StartCoroutine(OnDropObjectLate());
                 isLeftHandGrab = true;
+               
 
 
                 // Trigger haptic feedback
@@ -124,6 +126,17 @@ public class ExpositGrabInteractable : MonoBehaviour
         {
             transform.localPosition = Vector3.zero; // Optionally, reset the position relative to the hand
             transform.localRotation = Quaternion.identity; // Optionally, reset the rotation relative to the hand
+        }
+    }
+    private void Update()
+    {
+        if (isRightHandGrab)
+        {
+            isLeftHandGrab = false;
+        }
+        if (isLeftHandGrab)
+        {
+            isRightHandGrab = false;
         }
     }
 

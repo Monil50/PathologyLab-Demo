@@ -43,11 +43,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR;
+using TMPro;
 
 public class ShakeCounter : MonoBehaviour
 {
     public XRNode rightControllerNode = XRNode.RightHand; // Set to the desired hand controller
     public XRNode leftControllerNode = XRNode.LeftHand; // Set to the desired hand controller
+    public TMP_Text CountingText;
     public float shakeThreshold = 2.0f; // Adjust threshold as needed
     public float timeBetweenShakes = 0.5f; // Minimum time between shakes
     public Collider capCollider;
@@ -55,6 +57,7 @@ public class ShakeCounter : MonoBehaviour
     private int shakeCount = 0;
     private float lastShakeTime = 0;
     public UnityEvent endShake;
+   
 
     void Update()
     {
@@ -101,7 +104,7 @@ public class ShakeCounter : MonoBehaviour
             shakeCount++;
             lastShakeTime = Time.time;
             Debug.LogWarning("Shake Detected! Total Shakes: " + shakeCount);
-
+            CountingText.text = shakeCount.ToString();
             if (shakeCount > 8)
             {
                // AudioManager.instance.PlayAudio("correct-156911");
