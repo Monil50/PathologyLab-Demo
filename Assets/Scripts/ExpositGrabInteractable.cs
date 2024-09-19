@@ -93,17 +93,26 @@ public class ExpositGrabInteractable : MonoBehaviour
 
             if (isGrabbed)
             {
-                StartCoroutine(Release());
-                DropPoint.SetActive(false);
-                Debug.Log("function called relese");
-
-                BNGRightHand.SetActive(true);
-                ObjectSanpRightHand.SetActive(false);
-                BNGLeftHand.SetActive(true);
-                ObjectSanpLeftHand.SetActive(false);
-
-                RighthandColider.enabled = true;
-                LefthandColider.enabled = true;
+                if (isRightHandGrab)
+                {
+                    StartCoroutine(Release());
+                    DropPoint.SetActive(false);
+                    Debug.Log("function called relese");
+                    BNGRightHand.SetActive(true);
+                    ObjectSanpRightHand.SetActive(false);
+                    RighthandColider.enabled = true;
+                }
+                if (isLeftHandGrab)
+                {
+                    StartCoroutine(Release());
+                    DropPoint.SetActive(false);
+                    Debug.Log("function called relese");
+                    BNGLeftHand.SetActive(true);
+                    ObjectSanpLeftHand.SetActive(false);
+                    LefthandColider.enabled = true;
+                }
+                
+               
             }
         }
     }
