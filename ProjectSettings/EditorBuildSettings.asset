@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Final Room/1.PathologyLab - Main Scene Easy Edits.unity
+    path: Assets/Scenes/Final Room/Pathology Final Room BEFORE 1-10-2024.unity
     guid: 1959eb7ff46d35a42a055db625642ef1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 91cb86f02a18e874880553b0191acae7,
